@@ -4,13 +4,21 @@ html {
 }
 * {
   box-sizing: border-box;
-  font-family: "Roboto", sans-serif;
+  font-family: "Raleway", sans-serif;
   margin: 0;
 }
-
+canvas {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: -1;
+}
 .wrap {
+  position: absolute;
+  z-index: 9;
+
   display: grid;
-  grid-template-columns: 37% 63%;
+  grid-template-columns: 30% 70%;
   height: 100vh;
 }
 
@@ -18,9 +26,6 @@ html {
   display: grid;
   grid-template-rows: 50% 50%;
   grid-row-gap: 1em;
-  background-image: url(./K.jpg);
-  background-repeat: no-repeat;
-  background-size: cover;
   color: #eee;
 }
 
@@ -49,7 +54,6 @@ html {
   display: grid;
   height: 100%;
   width: 100%;
-  background-color: black;
   box-shadow: 0 0.5rem 3rem rgba(0, 0, 0, 0.247);
 
   color: #eee;
@@ -62,7 +66,8 @@ html {
 .month {
   width: 100%;
   height: 8rem;
-  background-color: #167e56;
+  border: 0.12rem solid rgb(224, 224, 224);
+
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -169,7 +174,6 @@ main {
 }
 
 .current .weather {
-  
   color: rgb(232, 230, 227);
   font-size: 25px;
   font-weight: 300;
@@ -185,11 +189,21 @@ main {
 }
 
 #clock {
-  font-weight: 300;
-  font-size: 5.5em;
-  margin-top: 15px;
+  letter-spacing: 0.25vw;
+  overflow: hidden;
+  white-space: nowrap;
 
-  color: rgb(232, 230, 227);
-  align-items: right;
+  font-size: 5em;
+  padding: 0 3.5rem 0 3.5rem;
+  transition: 0.3s;
+
   text-align: right;
-  text-shadow: rgba(0, 0, 0, 0.3) 1px 1px 0px;}
+  text-shadow: 0.1vw 0vw 0.25vw #ffd8d8, 0.2vw 0vw 0.25vw #ffd8d8,
+    0.4vw 0vw 0.25vw #ffd8d8, 0.1vw 0vw 0vw #f25757, 0.2vw 0vw 0vw #f25757,
+    0.4vw 0vw 0vw #f25757, 0.1vw 0vw 0.1vw #f25757, 0.2vw 0vw 0.1vw #f25757,
+    0.4vw 0vw 0.1vw #f25757, 0.1vw 0vw 2vw #f25757, 0.2vw 0vw 2vw #f25757,
+    0.4vw 0vw 2vw #f25757, 0.1vw 0vw 1vw #e50b0b, 0.2vw 0vw 1vw #e50b0b,
+    0.4vw 0vw 5vw #e50b0b, 0.1vw 0vw 5vw #e50b0b, 0.2vw 0vw 20vw #e50b0b,
+    0.4vw 0vw 10vw #e50b0b, 0.1vw 0vw 10vw #e50b0b, 0.2vw 0vw 30vw #e50b0b,
+    0.4vw 0vw 10vw #e50b0b;
+}

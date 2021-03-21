@@ -1,6 +1,8 @@
-const date = new Date();
+const dateN = new Date();
 
 const renderCalendar = () => {
+  var date = new Date();
+
   date.setDate(1);
 
   const monthDays = document.querySelector(".days");
@@ -71,12 +73,12 @@ const renderCalendar = () => {
 };
 
 document.querySelector(".prev").addEventListener("click", () => {
-  date.setMonth(date.getMonth() - 1);
+  dateN.setMonth(dateN.getMonth() - 1);
   renderCalendar();
 });
 
 document.querySelector(".next").addEventListener("click", () => {
-  date.setMonth(date.getMonth() + 1);
+  dateN.setMonth(dateN.getMonth() + 1);
   renderCalendar();
 });
 
